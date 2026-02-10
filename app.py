@@ -8,8 +8,8 @@ st.title("Tableau de Bord Marketing NovaRetail")
 st.markdown("---")
 
 # ---------------- Load data ----------------
-df_final = pd.read_parquet(r"C:\Users\ouafa\OneDrive\Documents\Block2\df_final.parquet")
-df_campaign = pd.read_parquet(r"C:\Users\ouafa\OneDrive\Documents\Block2\df_campaign.parquet")
+df_final = pd.read_parquet("df_final.parquet")
+df_campaign = pd.read_parquet("df_campaign.parquet")
 
 # ---------------- Color palette (same vibe, different shades) ----------------
 CHANNEL_ORDER = ["Emailing", "Google Ads", "LinkedIn Ads"]
@@ -217,3 +217,4 @@ st.plotly_chart(fig_heatmap, use_container_width=True)
 # ---------------- Optional: show data ----------------
 with st.expander("Afficher les données filtrées"):
     st.dataframe(df_selection)
+
